@@ -2,6 +2,16 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width">
+        <!-- DOM Document Object Model -->
+        <script>
+            function add() {
+                var num1 = document.getElementById('num1').value;
+                var num2 = document.getElementById('num2').value;
+
+                var sum = num1 + num2;
+                document.getElementsById('result').value = sum;
+            }
+        </script>
     </head>
     <body>
         <label for="num1">Number 1</label>
@@ -10,6 +20,8 @@
         <label for="num2">Number 2</label>
         <input type="text" id="num2">
 
-        <button>Add</button>
+        <button onclick="add()">Add</button>
+
+        <p id="result"></p>
     </body>
 </html>
